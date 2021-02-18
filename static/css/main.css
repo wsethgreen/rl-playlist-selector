@@ -123,7 +123,7 @@ li::before {
 }
 
 .selected__playlist__container {
-    margin: 30px auto 30px auto;
+    margin: 60px auto 60px auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -138,7 +138,6 @@ li::before {
 .button {
     background-color: #00CED1;
     color: #27251F;
-    margin-top: 30px;
     font-size: 1.25em;
     border: none;
     height: 50px;
@@ -156,11 +155,11 @@ li::before {
 
 .selected__playlist {
     width: 80%;
-    margin: 30px auto 0 auto;
+    margin: 40px auto 0 auto;
     text-align: center;
     color:#00CED1;
     font-size: 1.25em;
-    background-color: rgba(0, 0, 0, .60);
+    background-color: rgb(0, 0, 0);
     border: 2px solid transparent;
     border-radius: 5px;
     padding: 5px;

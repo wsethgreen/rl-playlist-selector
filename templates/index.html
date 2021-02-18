@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='content__container'>
+    <div class='welcome__container'>
+        <h1 class='welcome__title'>Welcome to RL Playlist Selector!</h1>
+        <h3 class='prompt'>Below are your playlists to choose from:</h3>
+    </div>
+    
+    <div class='playlist__container'>
+        <ol>
+            {% for key, value in rl_playlists.items() %}
+            <li><a class='rl_playlists' href="{{ value }}">{{ key }}</a></li>
+            {% endfor %}
+        </ol>
+    </div>
+    
+    <div class='selected__playlist__container'>
+        <form action="/" method="POST">
+            <input class= "button" type="submit" name="submit_button" value="Get Playlist">
+        </form>
+        <a class = 'selected__playlist' href="{{ random_playlist_url }}">{{ random_playlist }}</a>
+    </div>
+</div>
+
+{% endblock %}

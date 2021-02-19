@@ -28,8 +28,12 @@ def index():
     key = random.choice(list(rl_playlists.keys()))
     random_playlist = key
     random_playlist_url = rl_playlists[key]
-    return render_template('index.html', rl_playlists=rl_playlists, key=key,
+    
+    if request.method == 'POST':
+        return render_template('index.html', rl_playlists=rl_playlists, key=key,
                            random_playlist=random_playlist, random_playlist_url=random_playlist_url)
+    else:
+        return render_template('index.html', rl_playlists=rl_playlists)
 
 # Create route for the 'About' page
 @app.route('/about/', methods =["POST", "GET"])
